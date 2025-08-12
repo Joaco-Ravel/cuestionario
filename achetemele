@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de 60 preguntas con Gráfica</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+        .seccion {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .seccion.activa {
+            display: block;
+        }
+        .bloque {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #f8f9f9;
+        }
+        .pregunta {
+            margin-bottom: 12px;
+        }
+        label {
+            display: block;
+            margin-bottom: 4px;
+        }
+        select {
+            width: 100%;
+            max-width: 300px;
+            padding: 5px;
+            font-size: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+
+<div id="seccion0" class="seccion activa">
+<h3>INVESTIGANDO MIS INTERESES VOCACIONALES</h3>
+<p>
+<br>
+El presente ejercicio te ayudará a identificar tus intereses vocacionales, por lo que es necesario respondas con sinceridad. Te sugerimos reflexionar tus respuestas apoyándote de la siguiente pregunta: ¿Qué tanto te gustaría hacer…?
+Es importante no dejar ninguna respuesta en blanco para concluir de forma efectiva la actividad.<br>
+<br>
+Lee cada pregunta y anota el valor correspondiente conforme a la siguiente escala:<br>
+<br>
+5	ME INTERESA MUCHO.<br>
+4	ME INTERESA BASTANTE.<br>
+3	ME INTERESA.<br>
+2	ME ES INDIFERENTE.<br>
+1	ME INTERESA POCO.<br>
+0	NO ME INTERESA.<br>
+</p>
+	<button onclick="mostrarSeccion('seccion1')">Sección 1</button>
+</div>
+
+  <div id="seccion1" class="seccion">
+<h2>Sección 1</h2>
+	<h3>Bloque 1 (Preguntas 1 a 10)</h3>
+ <div class="bloque">
+
+    <div class="pregunta">
+        <label>Pregunta 1: Atender y cuidar a alguien enfermo.</label>
+        <select name="pregunta1">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 2: Participar activamente en debates durante la clase.</label>
+        <select name="pregunta2">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 3: Escribir cuentos, crónicas o artículos.</label>
+        <select name="pregunta3">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 4: Dibujar y pintar.</label>
+        <select name="pregunta4">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 5: Cantar. </label>
+        <select name="pregunta5">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 6: Organizar tus materiales escolares.</label>
+        <select name="pregunta6">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 7: Conocer y estudiar la composición de las plantas y animales.</label>
+        <select name="pregunta7">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 8: Resolver problemas matemáticos.</label>
+        <select name="pregunta8">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 9: Armar y desarmar objetos mecánicos.</label>
+        <select name="pregunta9">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 10:Salir de excursión.</label>
+        <select name="pregunta10">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+</div>
+	<button onclick="mostrarSeccion('seccion2')">Sección 2</button>
+</div>
+ 
+  <div id="seccion2" class="seccion">
+<h2>Sección 2</h2>
+<h3>Bloque 2 (Preguntas 11 a 20)</h3>
+ <div class="bloque">
+
+<div class="pregunta">
+        <label>Pregunta 11: Proteger a tus compañeros del grupo.</label>
+        <select name="pregunta11">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 12: Ser líder de un grupo.</label>
+        <select name="pregunta12">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 13: Leer obras literarias.</label>
+        <select name="pregunta13">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 14: Manipular barro, plastilina o cualquier otro material.</label>
+        <select name="pregunta14">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 15: Escuchar música clásica.</label>
+        <select name="pregunta15">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 16: Ordenar y clasificar los libros de una biblioteca.</label>
+        <select name="pregunta16">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 17: Hacer experimentos en un laboratorio.</label>
+        <select name="pregunta17">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 18: Resolver problemas de aritmética.</label>
+        <select name="pregunta18">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 19: Manejar herramientas y maquinaria, por ejemplo: cortadora, tractor, taladro, etc.</label>
+        <select name="pregunta19">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 20: Pertenecer a un grupo de exploradores. </label>
+        <select name="pregunta20">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+</div>
+	<button onclick="mostrarSeccion('seccion3')">Sección 3</button>
+</div>
+
+<div id="seccion3" class="seccion">
+<h2>Sección 3</h2>
+
+<h3>Bloque 3 (Preguntas 21 a 30)</h3>
+ <div class="bloque">
+
+<div class="pregunta">
+        <label>Pregunta 21:Participar en grupos de asistencia y ayuda.</label>
+        <select name="pregunta21">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 22: Coordinar la campaña de un candidato estudiantil.</label>
+        <select name="pregunta22">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 23: Realizar escritos para una publicación.</label>
+        <select name="pregunta23">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 24: Planear la decoración de un evento.</label>
+        <select name="pregunta24">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 25: Aprender a tocar un instrumento musical.</label>
+        <select name="pregunta25">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 26: Aprender a escribir y transcribir en computadora.</label>
+        <select name="pregunta26">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 27: Investigar el origen de las costumbres de los pueblos.</label>
+        <select name="pregunta27">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 28: Administrar las cuentas de una empresa.</label>
+        <select name="pregunta28">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 29: Construir objetos o muebles.</label>
+        <select name="pregunta29">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 30: Trabajar al aire libre, lejos de la ciudad.</label>
+        <select name="pregunta30">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+</div>
+	<button onclick="mostrarSeccion('seccion4')">Sección 4</button>
+</div>
+
+<div id="seccion4" class="seccion">
+<h2>Sección 4</h2>
+
+<h3>Bloque 4 (Preguntas 31 a 40)</h3>
+ <div class="bloque">
+<div class="pregunta">
+        <label>Pregunta 31: Enseñar a leer a las personas.</label>
+        <select name="pregunta31">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 32: Hacer promoción de una idea u objeto.</label>
+        <select name="pregunta32">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 33: Representar un papel en una obra de teatro.</label>
+        <select name="pregunta33">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 34: Generar y crear un logo para un equipo o club.</label>
+        <select name="pregunta34">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 35:Ser integrante de un grupo musical.</label>
+        <select name="pregunta35">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 36: Ayudar a calificar pruebas o exámenes</label>
+        <select name="pregunta36">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 37: Estudiar y entender las causas de los movimientos sociales.</label>
+        <select name="pregunta37">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 38: Estudiar y entender las causas de los movimientos sociales.</label>
+        <select name="pregunta38">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 39: Reparar las instalaciones eléctricas, de gas o de plomería de una casa. </label>
+        <select name="pregunta39">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 40: Sembrar, cultivar y cosechar en una granja.</label>
+        <select name="pregunta40">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+</div>
+	<button onclick="mostrarSeccion('seccion5')">Sección 5</button>
+</div>
+
+<div id="seccion5" class="seccion">
+<h2>Sección 5</h2>
+
+<h3>Bloque 5 (Preguntas 41 a 50)</h3>
+ <div class="bloque">
+
+<div class="pregunta">
+        <label>Pregunta 41:Ayudar a tus compañeros en sus dificultades y preocupaciones.</label>
+        <select name="pregunta41">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 42: Consultar biografías de políticos importantes o acerca de política.</label>
+        <select name="pregunta42">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 43: Participar en un concurso de oratoria.</label>
+        <select name="pregunta43">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 44: Diseñar el vestuario para obra de teatro.</label>
+        <select name="pregunta44">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 45:Consultar biografías de músicos importantes.</label>
+        <select name="pregunta45">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 46: Administrar los archivos y los documentos de una oficina.</label>
+        <select name="pregunta46">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 47: Consultar revistas y libros científicos.</label>
+        <select name="pregunta47">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 48: Participar en concursos de matemáticas.</label>
+        <select name="pregunta48">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 49:Diseñar y coordinar una construcción.</label>
+        <select name="pregunta49">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 50: Atender y trabajar con animales. </label>
+        <select name="pregunta50">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+</div>
+	<button onclick="mostrarSeccion('seccion6')">Sección 6</button>
+</div>
+
+<div id="seccion6" class="seccion">
+<h2>Sección 6; ¿QUÉ TANTO TE INTERESA TRABAJAR COMO?</h2>
+
+<h3>Bloque 6 (Preguntas 51 a 60)</h3>
+ <div class="bloque">
+<div class="pregunta">
+        <label>Pregunta 51: Colaborador al servicio de población vulnerable.</label>
+        <select name="pregunta51">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 52: Encargado de relaciones públicas de una empresa.</label>
+        <select name="pregunta52">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 53: Redactor de un periódico o una editorial.</label>
+        <select name="pregunta53">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 54: Dibujante profesional en una empresa.</label>
+        <select name="pregunta54">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 55: Concertista en una sinfónica.</label>
+        <select name="pregunta55">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 56: Asistente administrativo en una empresa.</label>
+        <select name="pregunta56">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 57: Investigador en un laboratorio.</label>
+        <select name="pregunta57">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 58: Encargado de contaduría y finanzas de una empresa.</label>
+        <select name="pregunta58">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 59: Encargado de la maquinaria en un taller o industria.</label>
+        <select name="pregunta59">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="pregunta">
+        <label>Pregunta 60: Colaborador en actividades fuera de la ciudad.</label>
+        <select name="pregunta60">
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+    </div>
+</div>
+	<button onclick="mostrarSeccion('resultado'); mostrarResultados()">Resultado</button>
+</div>
+
+
+<div id="resultado" class="seccion">
+
+<h3>Tabla de Resultados (Acumulados por grupo)</h3>
+<table id="tablaResultados">
+    <thead>
+        <tr>
+            <th>Grupo</th>
+            <th>Suma de Valores</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<h3>Gráfica de Barras</h3>
+<canvas id="graficaResultados" width="400" height="200"></canvas>
+</div>
+
+
+<script>
+   function mostrarSeccion(id) {
+      // Oculta todas las secciones
+      var secciones = document.querySelectorAll('.seccion');
+      secciones.forEach(function(seccion) {
+        seccion.classList.remove('activa');
+      });
+
+      // Muestra la sección seleccionada
+      var seccionActiva = document.getElementById(id);
+      seccionActiva.classList.add('activa');
+    }
+
+    function mostrarResultados() {
+        const respuestas = [];
+        for (let i = 1; i <= 60; i++) {
+            const valor = parseInt(document.querySelector(`[name=pregunta${i}]`).value);
+            respuestas.push(valor);
+        }
+
+        const sumaPorGrupo = Array(10).fill(0);
+        for (let i = 0; i < 60; i++) {
+            const indiceGrupo = i % 10;
+            sumaPorGrupo[indiceGrupo] += respuestas[i];
+        }
+
+        const tbody = document.querySelector('#tablaResultados tbody');
+        tbody.innerHTML = '';
+	labels= ['Servicio Social','Ejecutivo Persuasivo','Verbal','Artístico Plástico','Artístico Musical','Organización','Científico','Cálculo','Mecánico Constructivo','Actividad al Aire Libre'],
+        sumaPorGrupo.forEach((valor, index) => {
+            const row = `<tr><td>${labels[index]}</td><td>${valor}</td></tr>`;
+            tbody.innerHTML += row;
+        });
+
+        const ctx = document.getElementById('graficaResultados').getContext('2d');
+        if (window.miGrafica) {
+            window.miGrafica.destroy();
+        }
+        window.miGrafica = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Servicio Social','Ejecutivo Persuasivo','Verbal','Artístico Plástico','Artístico Musical','Organización','Científico','Cálculo','Mecánico Constructivo','Actividad al Aire Libre'],
+                datasets: [{
+                    label: 'Suma de Respuestas',
+                    data: sumaPorGrupo,
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        stepSize: 1
+                    }
+                }
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
